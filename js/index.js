@@ -3,6 +3,7 @@
 
 const body = document.querySelector('body');
 const nav = document.querySelector('.main-navigation');
+const navbtns = document.querySelectorAll('.nav-link');
 const header = document.querySelector('.intro');
 const logo = document.querySelector('.logo-heading');
 const busImg = document.querySelector('.intro img');
@@ -13,6 +14,7 @@ const mainTitles = document.querySelectorAll('.text-content h2');
 const destination = document.querySelector('.content-destination');
 const signUpBtns = document.querySelectorAll('.btn');
 const footer = document.querySelector('.footer');
+
 
 function end(event){
     if(event.key === 'Escape') {
@@ -35,6 +37,8 @@ function scoooo() {
         behavior: 'smooth'
     });
 }
+
+navbtns[0] = (event) => { event.stopPropagation() };
 
 nav.style.zIndex= '3';
 
